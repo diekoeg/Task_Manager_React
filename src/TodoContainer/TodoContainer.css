@@ -1,0 +1,81 @@
+.todoContainer{
+    grid-column: 2/3;
+    grid-row: 3;
+    border: 1px solid black; 
+    background-color: white;   
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 0 15px 0 15px;
+  }
+  
+  .todoItemContainer{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    border: 1px solid black; 
+    padding-right: 0I;
+  /*     background-color: #ccc;  */  
+    border-radius: 5px;
+  }
+  
+  .buttonCircle{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .material-symbols-outlined {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48
+  }
+
+.material-symbols-outlined:hover {
+    font-variation-settings:
+    'FILL' 1
+  }
+  
+  .selectedItem{
+    border-left: '1px solid black';
+    height: '100%';
+    grid-column: '1';
+    grid-row: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .selectedItem:hover{
+    background-color: #A8D1D1;
+    cursor: pointer;
+  }
+  
+  .closeItem{
+    border-left: '1px solid black';
+    height: '100%';
+    grid-column: '2';
+    grid-row: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .closeItem:hover{
+    background-color: #FD8A8A;
+    cursor: pointer;
+  }
+  
+  .todoItemText {
+    padding-left: '25px';
+  }
+  
+  .todoItemTextCompleted{
+    text-decoration: line-through;
+    padding-left: '25px';
+  }

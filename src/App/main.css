@@ -1,0 +1,26 @@
+.containerMain{
+  display: grid;
+  padding: 10px 10px 10px 10px;
+  grid-template-columns: 1fr 6fr 1fr;
+/*     grid-template-rows: 1fr 1fr 1fr; */
+  column-gap: 10px;
+  row-gap: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.containerSec{
+  padding: 10px 10px 20px 10px;
+  border: 2px solid black;        
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 1fr;
+  border-radius: 10px;
+  column-gap: 10px;
+  row-gap: 15px;
+  background: url('./bg.webp');
+  background-size: 100% 100%;
+  /* background: rgb(193,236,228);
+  background: linear-gradient(180deg, rgba(193,236,228,1) 33%, rgba(255,208,208,1) 66%); */
+  background-repeat: no-repeat;
+  }
