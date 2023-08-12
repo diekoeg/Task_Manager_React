@@ -8,7 +8,7 @@
     transition: 0.5s;
     outline: none;
     border-radius: 5px;
-    background-position: 10px 10px;
+    background-position: 15px 15px;
     background-image: url('./searchicon.png');
     background-size: 25px 25px;
     background-repeat: no-repeat;

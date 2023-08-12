@@ -25,3 +25,10 @@
   background: linear-gradient(180deg, rgba(193,236,228,1) 33%, rgba(255,208,208,1) 66%); */
   background-repeat: no-repeat;
   }
+
+.rightContainer{
+  grid-column: 3;
+  border: 2px solid black; 
+  border: 1px solid black; 
+  background-color: white;   
+}
