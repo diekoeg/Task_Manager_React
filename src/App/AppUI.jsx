@@ -1,8 +1,8 @@
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
-import { TodoItem } from '../TodoContainer/TodoItem';
-import { TodoList } from '../TodoContainer/TodoList';
-import { TodoAddButton } from '../TodoContainer/TodoAddButton';
+import { TodoItem } from '../TodoItem';
+import { TodoList } from '../TodoList';
+import { TodoAddButton } from '../TodoAddButton';
 import './App.css';
 import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
@@ -43,7 +43,8 @@ function AppUI(){
             <TodoList>
               {loading && <TodosLoading />}
               {error && <TodosError />}
-              {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
+              {(!loading && searchedTodos.length === 0) &&
+               <EmptyTodos />}
 
               {searchedTodos.map(todo => (
                 <TodoItem 
@@ -55,9 +56,12 @@ function AppUI(){
                     />
                 ))}
             </TodoList>
-            <TodoAddButton 
-              showModal = {() => showModal()}
-            />
+            {(!loading && searchedTodos.length !== 0) && 
+              <TodoAddButton 
+                showModal = {() => showModal()}
+              />
+            }
+            
           </div>
         </div>
       </div>

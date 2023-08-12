@@ -1,0 +1,23 @@
+.EmptyTodosButton{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    width: 90%;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: #85E6C5;
+    -webkit-transition: 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.EmptyTodosButton:hover{
+    background-color: #5B9A8B;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

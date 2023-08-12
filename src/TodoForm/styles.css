@@ -46,9 +46,19 @@ textarea{
 .TodoForm-button--submit{
     background-color: #AAC8A7;
     box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+    -webkit-transition: 0.5s;
+}
+
+.TodoForm-button--submit:hover{
+    background-color: #557A46;
 }
 
 .TodoForm-button--cancel{
     background-color: #EF6262;
     margin-right: 25px;
+    -webkit-transition: 0.5s;
+}
+
+.TodoForm-button--cancel:hover{
+    background-color: #CD1818;
 }

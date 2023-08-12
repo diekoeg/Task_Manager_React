@@ -1,7 +1,7 @@
 import React from 'react'
-import { TodoItem } from './TodoItem';
-import { TodoList } from './TodoList';
-import { TodoAddButton } from './TodoAddButton';
+import { TodoItem } from '../TodoItem';
+import { TodoList } from '../TodoList';
+import { TodoAddButton } from '../TodoAddButton';
 
 import './TodoContainer.css';
 

@@ -5,7 +5,9 @@ function TodoList({ children }) {
     <ul style={{
       listStyle: 'none',
       padding: '0px 0px 0px 0px ',
-      gridRow: '1'
+      gridRow: '1',
+      height: '400px',
+      overflow:'auto'
     }}>
       {children}
     </ul>
