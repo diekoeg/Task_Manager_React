@@ -10,7 +10,6 @@ function TodoAddButton({showModal}) {
       alignContent: 'center',
       paddingBottom: '15px',
       gridRow: '2',
-      zIndex:'1'
     }}>
       <span 
         onClick={showModal}

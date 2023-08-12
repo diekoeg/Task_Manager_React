@@ -9,10 +9,13 @@ import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
+
 /* import { CompletedContainer } from './CompletedContainer'; */
 
 import './main.css';
 import React from 'react';
+
 
 
 
@@ -61,7 +64,7 @@ function AppUI(){
 
       {openModal && (
         <Modal>
-          Agregar task
+          <TodoForm />
         </Modal>
       )}
       
