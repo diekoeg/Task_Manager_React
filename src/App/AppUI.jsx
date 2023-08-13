@@ -12,11 +12,13 @@ import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
 import { Navbar } from '../Navbar';
 import CircularWithValueLabel from '../CircularProgressWithLabel';
+import { Timer } from '../Timer';
+import { CompletedPanel } from '../CompletedPanel';
 
-/* import { CompletedContainer } from './CompletedContainer'; */
 
 import './main.css';
 import React from 'react';
+
 
 
 function AppUI(){
@@ -42,7 +44,7 @@ function AppUI(){
          <TodoSearch />
          
          <div className='todoContainer'>
-            <TodoList>
+            <TodoList type={1}>
               {loading && <TodosLoading />}
               {error && <TodosError />}
               {(!loading && searchedTodos.length === 0) &&
@@ -50,11 +52,11 @@ function AppUI(){
 
               {searchedTodos.map(todo => (
                 <TodoItem 
-                    key={todo.text} 
-                    text = {todo.text}
+                    key={todo.title} 
+                    item = {todo}
                     completed = {todo.completed} 
-                    onComplete = {() => completeTodo(todo.text)} 
-                    onDelete = {() => deleteTodo(todo.text)}
+                    onComplete = {() => completeTodo(todo.title)} 
+                    onDelete = {() => deleteTodo(todo.title)}
                     />
                 ))}
             </TodoList>
@@ -67,8 +69,8 @@ function AppUI(){
           <div className='rightContainer'>
             <Navbar />
             {navbarState === 1 && <CircularWithValueLabel />}
-{/*             {navbarState === 2 && <CompletedList />}
-            {navbarState === 3 && <Timer />} */}
+            {navbarState === 2 && <CompletedPanel />}
+            {navbarState === 3 && <Timer />}
           </div>
 
         </div>

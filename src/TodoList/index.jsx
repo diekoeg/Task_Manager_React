@@ -1,14 +1,12 @@
 import React from 'react'
+import './TodoList.css'
 
-function TodoList({ children }) {
+function TodoList({ 
+  children, 
+  type 
+}) {
   return (
-    <ul style={{
-      listStyle: 'none',
-      padding: '0px 0px 0px 0px ',
-      gridRow: '1',
-      height: '400px',
-      overflow:'auto'
-    }}>
+    <ul className={`todoList ${type === 1 ? 'leftPanel':'rightPanel'}`}>
       {children}
     </ul>
   )

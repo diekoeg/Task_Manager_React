@@ -4,7 +4,7 @@ import { TodoContext } from '../TodoContext';
 
 function TodoCounter() {
   const {
-    completedTodos: completed, 
+    completedTodosLength: completed, 
     totalTodos: total
   } = React.useContext(TodoContext);
 

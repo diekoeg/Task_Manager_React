@@ -1,0 +1,13 @@
+.todoList{
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+    grid-row: 1;
+    overflow:auto;
+}
+
+.leftPanel{
+    height: 400px;
+}
+.rightPanel{
+    height: 360px;
+}

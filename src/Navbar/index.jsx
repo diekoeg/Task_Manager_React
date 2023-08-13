@@ -1,9 +1,8 @@
 import React from 'react'
 import './Navbar.css'
+import { TodoContext } from '../TodoContext';
 
 function Navbar() {
-  // Para el manejo de la navbar del panel derecho
-  const [navbarState, setNavbarState] = React.useState(1); 
 
   const navs = [
     {text: "Progress", selected: true, value: 1},
@@ -11,17 +10,40 @@ function Navbar() {
     {text: "Timer", selected: false, value: 3}
   ]
 
+  const{
+    setNavbarState
+  } = React.useContext(TodoContext);
 
+  const[newNavbar, setNewNavbar] = React.useState(navs);
 
   return (
     <div style={{
       gridRow: 1,
-      width: '100%'
+      width: '100%',
+      borderBottom:'1px solid black'
     }}>
       <nav className='nav-links'>
         <ul>
-          {navs.map((page) => (
+          {newNavbar.map((page) => (
             <li key={page.value} 
+                onClick={() =>{
+
+                  if (page.value === 1){
+                    navs[0].selected = true;
+                    navs[1].selected = false;
+                    navs[2].selected = false;
+                  } else if (page.value === 2) {
+                    navs[0].selected = false;
+                    navs[1].selected = true;
+                    navs[2].selected = false;
+                  } else{
+                    navs[0].selected = false;
+                    navs[1].selected = false;
+                    navs[2].selected = true;
+                  }
+                  setNavbarState(page.value);
+                  setNewNavbar(navs)
+                }}
               className={`${page.selected && 'nav-links--selected'}`}> 
               {page.text} 
             </li>
