@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserContainer() {
+function CompletedPanel() {
   return (
     <div>
       CompletedContainer
@@ -8,4 +8,4 @@ function UserContainer() {
   )
 }
 
-export  {UserContainer}
+export  {CompletedPanel}

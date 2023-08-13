@@ -8,10 +8,11 @@ function useLocalStorage(itemName, initialValue){
     //Para guardar el estado de la aplicacion
     const localStorageItem = localStorage.getItem(itemName);
   
-    let parsedItem;
+
 
     React.useEffect(() => {
       setTimeout(() => {
+        let parsedItem;
         try {
           if (!localStorageItem) {
             localStorage.setItem(itemName, JSON.stringify(itemName));

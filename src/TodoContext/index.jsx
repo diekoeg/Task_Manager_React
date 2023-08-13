@@ -60,6 +60,9 @@ function TodoProvider({children}){
         })
         saveTodos(newTodos);
       }
+    const percentage = completedTodos*100/totalTodos;
+    // Para el manejo de la navbar del panel derecho
+    const [navbarState, setNavbarState] = React.useState(1);
 
     return (
         <TodoContext.Provider value={{
@@ -75,7 +78,9 @@ function TodoProvider({children}){
             openModal,
             setOpenModal,
             showModal,
-            addTodo
+            addTodo,
+            navbarState,
+            percentage
         }}>
             {children}
         </TodoContext.Provider>
