@@ -1,5 +1,6 @@
 import React from 'react'
 import './TodoItem.css';
+import { TodoContext } from '../TodoContext';
 
 function TodoItem({
   item, 
@@ -8,7 +9,9 @@ function TodoItem({
   onDelete
 }){
   const [details, setDetails] = React.useState(false);
-
+  const {
+    showModal
+  } = React.useContext(TodoContext)
   return(
     <li style={{
       padding: '0px 5px 15px 5px'
@@ -57,10 +60,13 @@ function TodoItem({
         </div>
         
         {details &&
-          <div 
-            className='detailContainer'
-          > 
-            {item.coments}
+          <div className='detailContainer'> 
+            <div className='comentsContainer'>
+              {item.coments}
+            </div>
+            <div className='catContainer'>
+              <p>{item.cat}</p>
+            </div>
           </div>
         }
       </div>

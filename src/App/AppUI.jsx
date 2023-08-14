@@ -79,7 +79,9 @@ function AppUI(){
 
       {openModal && (
         <Modal>
-          <TodoForm />
+          <TodoForm 
+            items={searchedTodos}
+          />
         </Modal>
       )}
       

@@ -62,8 +62,14 @@ export {useLocalStorage};
     {title: 'Comer', completed: false, cat: 'home', coments: 'bb', prio: true}, 
     {title: 'LALA', completed: true, cat: 'school', coments: 'a', prio: false}
   ]
-
   localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
   localStorage.removeItem('TODOS_V1') 
+
+  
+ const title =  'Cortar cecbolla';
+ const completed= true;
+ const cat= 'home'; 
+ const coments= 'hola';
+ const prio= false;
 ]; 
 */

@@ -63,12 +63,9 @@ function TodoProvider({children}){
         setOpenModal(state => !state)
       }
 
-      const addTodo = (title) =>{
+      const addTodo = (item) =>{
         const newTodos = [...todos];
-        newTodos.push({
-          title,
-          completed: false
-        })
+        newTodos.push(item)
         saveTodos(newTodos);
       }
     const percentage = completedTodosLength*100/totalTodos;
