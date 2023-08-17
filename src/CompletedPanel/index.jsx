@@ -1,7 +1,7 @@
 import React from 'react'
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
-import { TodoContext } from '../TodoContext';
+import { TodoContext } from '../TodoContext'
 
 function CompletedPanel() {
   const {

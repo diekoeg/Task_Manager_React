@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import { TodoContext } from '../TodoContext';
+import { TodoContext } from '../TodoContext'
 
 function Navbar() {
 

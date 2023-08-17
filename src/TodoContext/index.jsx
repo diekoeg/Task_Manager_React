@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocalStorage } from './useLocalStorage';
+import { useLocalStorage } from '../customHooks/useLocalStorage';
 
 const TodoContext =  React.createContext();
 
@@ -73,6 +73,7 @@ function TodoProvider({children}){
     // Para el manejo de la navbar del panel derecho
     const [navbarState, setNavbarState] = React.useState(1);
 
+
     return (
         <TodoContext.Provider value={{
             loading,
@@ -92,7 +93,8 @@ function TodoProvider({children}){
             addTodo,
             navbarState,
             percentage,
-            setNavbarState
+            setNavbarState,
+            
         }}>
             {children}
         </TodoContext.Provider>

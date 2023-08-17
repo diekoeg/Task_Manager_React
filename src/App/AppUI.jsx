@@ -7,7 +7,7 @@ import './App.css';
 import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
-import { TodoContext } from '../TodoContext';
+import { TodoContext } from '../TodoContext'
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
 import { Navbar } from '../Navbar';
@@ -32,7 +32,6 @@ function AppUI(){
     showModal,
     navbarState
   } = React.useContext(TodoContext);
-
 
 
   return (
@@ -70,7 +69,8 @@ function AppUI(){
             <Navbar />
             {navbarState === 1 && <CircularWithValueLabel />}
             {navbarState === 2 && <CompletedPanel />}
-            {navbarState === 3 && <Timer />}
+            {navbarState === 3 && <Timer />
+            }
           </div>
 
         </div>

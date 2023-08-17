@@ -1,10 +1,8 @@
 import React from 'react'
 import './styles.css'
-import { TodoContext } from '../TodoContext';
+import { TodoContext } from '../TodoContext'
 
-function TodoForm({
-  items
-}) {
+function TodoForm({items}) {
   const{
     showModal,
     addTodo,
