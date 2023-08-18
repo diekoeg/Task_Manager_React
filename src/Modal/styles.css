@@ -8,4 +8,5 @@
     right: 0;
     bottom: 0;
     background-color: rgba(32, 35, 41, .8);
+    z-index: 3;
 }

@@ -8,6 +8,7 @@ form{
     background-color: #fff;
     padding: 33px 40px;
     border-radius: 5px;
+    z-index: 1;
 }
 
 label{
@@ -157,7 +158,6 @@ textarea{
 .contentSelect:hover i{
 	margin-top: 3px;
 }
-
 
 
 
