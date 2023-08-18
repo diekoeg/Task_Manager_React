@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 330px;
   
 }
 .show-counter{
@@ -26,18 +27,81 @@
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 25px;
+  font-size: 50px;
+}
+
+.input-time{
+  width: 200px;
+  height: 200px;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;    
+  }
+}
+
+.input-time:focus{
+  background: 
+    linear-gradient(#000, #000) center bottom 20px /calc(100% - 10px) 2px no-repeat;
+}
+
+
+.button-time{
+  width: 80px;
+  height: 40px;
+  margin: 15px 15px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.button-time:hover{
+  cursor: pointer;
 }
 
 .button-play{
-  width: 100px;
-}
-.input-time{
-  width: 45px;
-  height: 45px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  background-color: #9ED2BE;
+  transition: 0.5s;
 }
 
+.button-play:hover{
+  background-color: #7EAA92;
+}
+
+.button-stop{
+  background-color: #EF6262;
+  transition: 0.5s;
+}
+
+.button-stop:hover{
+  background-color: #F24C3D;
+}
+
+.button-pause{
+  background-color: #64CCC5;
+  transition: 0.5s;
+}
+
+.button-pause:hover{
+  background-color: #176B87;
+}
+
+.span-time{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+@media (max-width: 1110px){
+  .container{
+      grid-row: 2/4;
+      grid-column: 1;
+  }
+}

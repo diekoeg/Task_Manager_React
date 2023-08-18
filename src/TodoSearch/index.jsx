@@ -17,10 +17,6 @@ function TodoSearch() {
       className='search'
       value={searchValue} 
       placeholder='Cortar cebolla' 
-      style={{
-        gridColumn: '2/4',
-        gridRow: '2'
-      }}
     />
   )
 }

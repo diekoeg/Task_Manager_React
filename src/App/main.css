@@ -49,4 +49,31 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  padding-inline: 5px;
+}
+
+@media (max-width: 1560px){
+  .containerMain{
+    justify-content: center;
+    align-items: center;
+  }
+  .containerSec{
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto;
+    grid-row: 3;
+  }
+  .todoContainer{
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .rightContainer{
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 1110px) {
+  .rightContainer{
+    grid-template-rows: 10% 30% 60%;
+  }
 }

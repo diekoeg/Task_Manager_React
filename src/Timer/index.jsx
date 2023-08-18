@@ -34,23 +34,43 @@ function Timer() {
             }}
           /> 
         </div>
+        <div className='span-time'>
+        <span>{'Mins'}</span>
+        <span>{'Sec'} </span>
+        </div>
+        
 
-        <span>{'Mins'} {'Sec'} </span>
-        <div>
-          <button className='button-play' 
+        <div className='container-buttons'>
+          <button className='button-time button-play' 
             onClick={() => {
-              setIsRunning(true)
+              if(seconds === 0 && minutes === 0 ){
+                setIsRunning(false)
+                window.alert('Add Time')
+              }else{
+                setIsRunning(true)
+              }
             }}>
               <span className="material-symbols-outlined">
                 play_arrow
               </span>
             </button>
-            <button className='button-play' 
+            <button className='button-time button-pause' 
             onClick={() => {
               setIsRunning(false)
             }}>
               <span className="material-symbols-outlined">
                 pause
+              </span>
+            </button>
+
+            <button className='button-time button-stop' 
+            onClick={() => {
+              setIsRunning(false)
+              setMinutes(0)
+              setSeconds(0)
+            }}>
+              <span className="material-symbols-outlined ">
+                stop
               </span>
             </button>
         </div>

@@ -1,0 +1,15 @@
+.containerCompleted{
+    grid-row: 2;
+    height: 100%;
+    min-height: 330px;
+}
+
+
+
+@media (max-width: 1110px){
+    .containerCompleted{
+        grid-row: 2/4;
+        grid-column: 1;
+        max-height: 330px;
+    }
+  }

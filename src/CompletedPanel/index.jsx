@@ -2,6 +2,7 @@ import React from 'react'
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { TodoContext } from '../TodoContext'
+import './CompletedPanel.css'
 
 function CompletedPanel() {
   const {
@@ -11,10 +12,7 @@ function CompletedPanel() {
   } = React.useContext(TodoContext);
 
   return (
-    <div style={{
-      gridRow: 2,
-      height: '100%'
-    }}>
+    <div className='containerCompleted'>
       <TodoList type={2}>
         {searchedCompletedTodos.map((todo) => (
           <TodoItem 

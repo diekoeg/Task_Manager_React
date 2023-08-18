@@ -1,5 +1,6 @@
 import React from 'react'
 import { TodoContext } from '../TodoContext'
+import './TodoCounter.css'
 
 
 function TodoCounter() {
@@ -9,13 +10,7 @@ function TodoCounter() {
   } = React.useContext(TodoContext);
 
   return (
-    <h1 style={{ 
-      textAlign: 'center',
-      margin: 0,
-      padding: '48px',
-      gridColumn: '2/4',
-      gridRow: '1'
-    }}>
+    <h1 className='counter'>
       You have completed {completed} of {total} tasks!
     </h1> 
   )

@@ -10,8 +10,6 @@ function TimerContextProvider({children}){
 
     React.useEffect(() => {
         let interval;
-        console.log(minutes);
-        console.log(seconds);
         if (isRunning){
             interval = setInterval(() => {
                 if (seconds > 0 ){
@@ -19,6 +17,7 @@ function TimerContextProvider({children}){
                 } else if (seconds === 0){
                     if (minutes === 0){
                         clearInterval(interval)
+                        setIsRunning(false)
                     } else{
                         setMinutes(minutes-1);
                         setSeconds(59);

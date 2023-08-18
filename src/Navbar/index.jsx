@@ -15,14 +15,21 @@ function Navbar() {
   } = React.useContext(TodoContext);
 
   const[newNavbar, setNewNavbar] = React.useState(navs);
+  const [showNavbar, setShowNavbar] = React.useState(false)
+
+  const handleShowNavbar = () => {
+    setShowNavbar(state => !state);
+  }
 
   return (
-    <div style={{
-      gridRow: 1,
-      width: '100%',
-      borderBottom:'1px solid black'
-    }}>
-      <nav className='nav-links'>
+    <div  className={`navbar ${showNavbar && 'navbar-active'} `}>
+      <div className='icon-menu'>
+      <span onClick={handleShowNavbar}
+        className="material-symbols-outlined">
+        menu
+      </span>
+      </div>
+      <div className={`nav-links ${showNavbar && 'active'}`}>
         <ul>
           {newNavbar.map((page) => (
             <li key={page.value} 
@@ -49,8 +56,9 @@ function Navbar() {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
     </div>
+    
   )
 }
 
