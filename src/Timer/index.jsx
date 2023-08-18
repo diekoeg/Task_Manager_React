@@ -16,30 +16,31 @@ function Timer() {
     return (
       <div className='container'>
         <div className='time-container'>
-          <input className='input-time'
-            disabled={isRunning && true}
-            type="text" 
-            value={minutes} 
-            onChange={(event) =>{
-              setMinutes(event.target.value);
-            }}
-          /> 
+          <div className='individual-container'>
+            <input className='input-time'
+              disabled={isRunning && true}
+              type="text" 
+              value={minutes} 
+              onChange={(event) =>{
+                setMinutes(event.target.value);
+              }}
+            /> 
+            <span>{'Mins'}</span>
+          </div>
           <p>:</p>
-          <input className='input-time' 
-            disabled={isRunning && true}
-            type="text" 
-            value={seconds} 
-            onChange={(event) =>{
-              setSeconds(event.target.value);
-            }}
-          /> 
+          <div className='individual-container'>
+            <input className='input-time' 
+              disabled={isRunning && true}
+              type="text" 
+              value={seconds} 
+              onChange={(event) =>{
+                setSeconds(event.target.value);
+              }}
+            /> 
+            <span>{'Sec'} </span>
+          </div>
+          
         </div>
-        <div className='span-time'>
-        <span>{'Mins'}</span>
-        <span>{'Sec'} </span>
-        </div>
-        
-
         <div className='container-buttons'>
           <button className='button-time button-play' 
             onClick={() => {
