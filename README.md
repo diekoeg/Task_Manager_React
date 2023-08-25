@@ -1,5 +1,5 @@
 # Task manager realizado con React.js
-!Hola! 
+¡Hola! 
 
 En este repositorio se muestra un proyecto que consiste en un Task manager, que consiste en una aplicación dónde podemos crear una lista de tareas con diversos campos, tales como un titulo, una categoría, una descripción y una etiqueta de prioridad. A su vez, tenemos tambien un segundo panel que nos ayudará con cierta retroalimentación, llevando un seguimiento de cuantas tareas nos faltan por completar, así como también un cronómetro que nos ayudará a tener más orden con nuestras tareas. En resumen, es un mini-Pomodoro.
 
